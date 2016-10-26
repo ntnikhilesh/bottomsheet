@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ThreePhasesBottomSheet
 A bottom sheet sample that's similar to how Google Maps treat it.
 Example animation:
@@ -34,3 +35,6 @@ Second method, of using just a NestedScrollView :
 - doesn't snap for scrolling of the bottom sheet, when it's in expanded mode. not an issue, just a missing feature. 
 - pressing the back button when the bottom sheen is expaneded can cause weird UI issues.
 - might have other issues.
+=======
+# nikhildemorepo
+>>>>>>> 7099d6fbc6077ea25b8508cdbdb9525073c02054
