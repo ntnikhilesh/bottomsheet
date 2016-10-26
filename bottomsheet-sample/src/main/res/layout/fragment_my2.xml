@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+<!-- start unexpended bottom sheet  -->
+            <FrameLayout
+                android:id="@+id/bottomsheetHeader"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/header_height_peeked"
+                tools:paddingTop="5dp">
+
+              <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#fff"/>
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/unexp_CircularImageView"
+                    android:layout_width="@dimen/moving_image_collapsed_bottom_sheet_size"
+                    android:layout_height="@dimen/moving_image_collapsed_bottom_sheet_size"
+                    android:layout_gravity="end"
+                    android:src="@drawable/car_icon"
+                    app:border="true"
+                    app:border_color="#fff"
+                    app:border_width="2dp"
+                    app:shadow="true"
+                    app:shadow_color="#44000000"
+                    app:shadow_radius="4"
+                    tools:background="#f00"
+                    android:visibility="visible"
+                    />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:textSize="20sp"
+                    android:text="UB City"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="@color/cardview_dark_background"
+                    />
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:background="#fff"
+                   >
+
+                    <LinearLayout
+                        android:id="@+id/unexp_rating_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_marginLeft="20dp"
+                            android:text="4.5"
+                            android:textStyle="bold"
+                            android:textColor="#FF8000"/>
+                        <RatingBar
+                            android:rating="4.5"
+                            android:stepSize="0.5"
+                            android:numStars="5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(1748)"
+                            android:textColor="@color/gray"
+                            android:gravity="center"
+                            android:layout_marginLeft="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                           android:layout_gravity="end"
+                            android:text="28 min"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"
+                            android:layout_marginLeft="90dp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+               <!-- <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="#f55"
+                    android:text="bottom"/> -->
+
+            </FrameLayout>
+
+            <!-- end unexpended bottom sheet  -->
+
+
+
+
+
+            <!-- start expended bottom sheet  -->
+            <LinearLayout
+                android:id="@+id/bottomsheetContentView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/window_color"
+                android:orientation="vertical">
+
+                <!-- start Nikhilesh below image  -->
+
+                <FrameLayout
+                    android:id="@+id/bottomsheetBelowImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/header_height_peeked"
+                    tools:paddingTop="5dp">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"/>
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/exp_CircularImageView"
+                        android:layout_width="@dimen/moving_image_collapsed_bottom_sheet_size"
+                        android:layout_height="@dimen/moving_image_collapsed_bottom_sheet_size"
+                        android:layout_gravity="end"
+                        android:src="@drawable/car_icon"
+                        app:border="true"
+                        app:border_color="#fff"
+                        app:border_width="2dp"
+                        app:shadow="true"
+                        app:shadow_color="#44000000"
+                        app:shadow_radius="4"
+                        tools:background="#f00"
+                        android:visibility="visible"
+                        />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:textSize="20sp"
+                        android:text="UB City"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="25dp"
+                        android:textColor="#fff"
+                        />
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:orientation="vertical"
+                        android:weightSum="3"
+                        android:background="@color/colorPrimary"
+                        >
+
+                        <LinearLayout
+                            android:id="@+id/exp_rating_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginLeft="20dp"
+                                android:text="4.5"
+                                android:textStyle="bold"
+                                android:textColor="#fff"/>
+                            <RatingBar
+                                android:rating="4.5"
+                                android:stepSize="0.5"
+                                android:numStars="5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1,748 reviews "
+                                android:textColor="#fff"
+                                android:gravity="center"
+                                android:layout_marginLeft="5dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:text="28 min"
+                                android:textStyle="bold"
+                                android:textColor="#fff"
+                                android:layout_marginLeft="50dp"
+                                />
+                        </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/exp_maptag_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:text="Shopping Mall"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="#fff"
+
+                            />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <!-- <TextView
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="bottom"
+                         android:background="#f55"
+                         android:text="bottom"/> -->
+
+                </FrameLayout>
+
+
+                <!-- <TextView
+                     android:layout_width="match_parent"
+                     android:layout_height="80dp"
+                     android:background="#58ACFA"
+                     android:text="Nikhilesh sec"
+                     android:textColor="#fff"
+                     android:textSize="30dp"/>  -->
+
+                <!-- end Nikhilesh below image  -->
+
+
+
+
+                <!-- start contact icons  -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:background="#fff">
+
+                    <LinearLayout
+                        android:id="@+id/call"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/call_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="CALL"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/website"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/save_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="SAVE"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/open"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/web_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="WEBSITE"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:background="#fff">
+
+                    <LinearLayout
+                        android:id="@+id/chat_on_mpage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/chat_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="CHAT"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/access_time_on_mpage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/access_time_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="TIME"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/share_on_mpage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/ivshae_on_mpage"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/share_icon" />
+
+                        <TextView
+                            android:id="@+id/tvshare_on_mpage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:text="SHARE"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- end contact icons  -->
+
+
+
+
+                <!-- start description  -->
+                <include layout="@layout/description"/>
+                <!-- end description  -->
+
+
+                <!-- start address,contact etc  -->
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/placeofmaptag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/place_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/place_desc"
+                        android:textColor="@color/cardview_dark_background"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/accesstime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/access_time" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Open now: 10:30 AM-8:30 PM"
+                        android:textColor="@color/cardview_dark_background"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/call1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/call" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="9453363771"
+                        android:textColor="@color/cardview_dark_background"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/web1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/web"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:text="http://www.ubcitybangalore.in/"
+                        android:textColor="@color/cardview_dark_background"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/edit_icon"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Suggest an edit"
+                        android:textStyle="italic"
+                        android:textColor="@color/cardview_dark_background"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/claim"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/claim_icon"
+                        android:layout_marginLeft="5dp"/>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Claim this business"
+                        android:textColor="@color/cardview_dark_background"
+                        />
+                </LinearLayout>
+
+
+                </LinearLayout>
+
+                <!-- start address,contact etc  -->
+
+                <include layout="@layout/junk_cardview"/>
+
+                <include layout="@layout/junk_cardview"/>
+
+                <!-- end description  -->
+
+
+               <!-- <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#05f"
+                    android:text="bottom"/> -->
+
+            </LinearLayout>
+            <!-- end expended bottom sheet  -->
+
+
+
+        </FrameLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+
+
+    <!-- start top header(image,toolbar etc) of expended  bottom sheet  -->
+
+    <FrameLayout
+        android:id="@+id/bottomSheetTopHeader"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height_peeked">
+
+
+
+       <ImageView
+            android:id="@+id/backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+           android:src="@drawable/topimage"
+            />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ToolbarColoredBackArrow">
+
+            <TextView
+                android:id="@+id/collapsedTitleTextView"
+                style="@style/CollapsedAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="?attr/actionBarSize"
+                android:singleLine="true"
+                android:text="UB City"/>
+        </android.support.v7.widget.Toolbar>
+
+    </FrameLayout>
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/movingIconImageView"
+        android:layout_width="@dimen/moving_image_collapsed_bottom_sheet_size"
+        android:layout_height="@dimen/moving_image_collapsed_bottom_sheet_size"
+        android:layout_gravity="end"
+        android:src="@drawable/car_direction"
+        app:border="true"
+        app:border_color="#fff"
+        app:border_width="2dp"
+        app:shadow="true"
+        app:shadow_color="#44000000"
+        app:shadow_radius="4"
+        tools:background="#f00"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:id="@+id/expandedTitleTextView"
+        style="@style/CollapsedAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="30dp"
+        android:visibility="invisible"/>
+</FrameLayout>
+
+    <!-- end top header(image,toolbar etc) of expended  bottom sheet  -->
