@@ -99,7 +99,7 @@ public class MyFragment2 extends BottomSheetFragment {
             }
         });
 
-        mLeftToolbar.setNavigationIcon(R.drawable.call);
+        mLeftToolbar.setNavigationIcon(R.drawable.back_arrow);
         mLeftToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

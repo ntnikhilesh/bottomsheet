@@ -1,23 +1,13 @@
 package com.lb.three_phases_bottom_sheet;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnFocusChangeListener;
-import android.view.View.OnKeyListener;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.TextView.OnEditorActionListener;
 
 import com.flipboard.bottomsheet.BottomSheetLayout;
 import com.flipboard.bottomsheet.commons.ImagePickerSheetView;
@@ -124,15 +114,15 @@ public final class MainActivity extends AppCompatActivity
 
 
       // Invite freicndws using Firebasse
-/*
-      Button invite=(Button)findViewById(R.id.invite_button);
+
+      Button invite=(Button)findViewById(R.id.goto_invite_page);
       invite.setOnClickListener(new OnClickListener() {
         @Override
         public void onClick(View view) {
-          Intent i1=new Intent(MainActivity.this,InviteActivity.class);
+          Intent i1=new Intent(MainActivity.this,InviteFriendActivity.class);
           startActivity(i1);
         }
-      });*/
+      });
     }
 /*
   @Override

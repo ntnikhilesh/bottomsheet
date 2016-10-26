@@ -72,7 +72,7 @@ public class MyFragment extends BottomSheetFragment
 //final ActionBar actionBar = activity.getSupportActionBar();
 //actionBar.setDisplayHomeAsUpEnabled(true);
 //actionBar.setTitle(null);
-    mLeftToolbar.setNavigationIcon(R.drawable.call);
+    mLeftToolbar.setNavigationIcon(R.drawable.back_arrow);
     mLeftToolbar.setNavigationOnClickListener(new View.OnClickListener()
       {
       @Override
