@@ -466,7 +466,7 @@
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:src="@drawable/place_icon" />
+                        android:src="@drawable/place_icon1" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -488,7 +488,7 @@
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:src="@drawable/access_time" />
+                        android:src="@drawable/access_time_icon" />
 
                     <TextView
                         android:layout_width="fill_parent"
@@ -510,7 +510,7 @@
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:src="@drawable/call" />
+                        android:src="@drawable/call_icon" />
 
                     <TextView
                         android:layout_width="fill_parent"
@@ -530,9 +530,9 @@
                     android:padding="10dp">
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/web"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/web_icon"
                         android:layout_marginLeft="10dp"/>
 
                     <TextView
@@ -555,7 +555,7 @@
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:src="@drawable/edit_icon"
+                        android:src="@drawable/edit_icon1"
                         android:layout_marginLeft="5dp"/>
 
                     <TextView
@@ -579,7 +579,7 @@
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="35dp"
-                        android:src="@drawable/claim_icon"
+                        android:src="@drawable/claim_icon1"
                         android:layout_marginLeft="5dp"/>
 
                     <TextView
@@ -638,7 +638,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-           android:src="@drawable/topimage"
+           android:src="@drawable/nt1"
             />
 
         <android.support.v7.widget.Toolbar
@@ -656,7 +656,8 @@
                 android:layout_gravity="left|center_vertical"
                 android:layout_marginLeft="?attr/actionBarSize"
                 android:singleLine="true"
-                android:text="UB City"/>
+                android:text="UB City"
+                android:visibility="invisible"/>
         </android.support.v7.widget.Toolbar>
 
     </FrameLayout>

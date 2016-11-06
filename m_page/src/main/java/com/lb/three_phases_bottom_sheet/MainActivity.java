@@ -115,14 +115,14 @@ public final class MainActivity extends AppCompatActivity
 
       // Invite freicndws using Firebasse
 
-      Button invite=(Button)findViewById(R.id.goto_invite_page);
+     /* Button invite=(Button)findViewById(R.id.goto_invite_page);
       invite.setOnClickListener(new OnClickListener() {
         @Override
         public void onClick(View view) {
           Intent i1=new Intent(MainActivity.this,InviteFriendActivity.class);
           startActivity(i1);
         }
-      });
+      }); */
     }
 /*
   @Override

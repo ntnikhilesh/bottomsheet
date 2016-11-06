@@ -1,2 +1,2 @@
-include ':bottomsheet', ':bottomsheet-commons', ':bottomsheet-sample'
+include ':bottomsheet', ':bottomsheet-commons', ':m_page'
 
